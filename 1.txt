@@ -1,1 +1,1 @@
-new_branch = delete
+use new_branch file to override the default
