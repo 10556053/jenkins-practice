@@ -3,7 +3,7 @@ pipeline {
     parameters{
         string (name:'VERSION', defaultValue: '' ,description:'專案版本')
         choice (name:'APP_PLATFORM', choices: ['android','ios'], description:'app開發平台')
-        booleanParam (name:'EXECUTE_TASK' , defaultValue: true , description'是否執行任務x')
+        booleanParam (name:'EXECUTE_TASK' , defaultValue: true , description:'是否執行任務x')
     }
     stages {
         stage('Build') {
