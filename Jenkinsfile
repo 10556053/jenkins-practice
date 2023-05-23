@@ -1,4 +1,4 @@
-String workspace = "/Users/iscd2/Documents/app_workspace"
+String workspace = "/home/ubuntu/myWorkspace"
 pipeline {
     agent any
     parameters{
