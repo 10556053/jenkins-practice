@@ -7,14 +7,15 @@ pipeline {
         choice (name:'BRANCH', choices: ['main','new_feature'], description:'要clone下來的branch')
         booleanParam (name:'EXECUTE_TASK' , defaultValue: true , description:'是否執行任務x')
     }
-    stage("Print") {
+    
+    stages {
+        stage("Print") {
             steps {
                 echo "VERSION: ${params.VERSION}"
                 echo "APP_PLATFORM: ${params.APP_PLATFORM}"
                 echo "EXECUTE_TASK: ${params.EXECUTE_TASK}"
             }
         }
-    stages {
         stage('Build') {
             steps {
                 script {
