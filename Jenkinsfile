@@ -20,6 +20,7 @@ pipeline {
             steps {
                 script {
                     sh "echo ${workspace}"
+                    sh "chmod -R 755 /home/ubuntu/myWorkspace"
                     sh "rm -R -f ${workspace}/svn_source_*"
                     if (params.APP_PLATFORM == "android") {
                         dir('svn_source_' + params.APP_PLATFORM) {
