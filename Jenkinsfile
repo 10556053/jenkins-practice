@@ -25,7 +25,7 @@ pipeline {
                         dir('svn_source_' + params.APP_PLATFORM) {
                             sh "git clone -b ${params.BRANCH} https://github.com/10556053/jenkins-practice.git"
                         }
-                    } else if (params.DEPLOY_TARGET == "ios" ) {
+                    } else if (params.APP_PLATFORM == "ios" ) {
                         dir('svn_source_' + params.APP_PLATFORM) {
                             sh "git clone -b ${params.BRANCH} https://github.com/10556053/jenkins-practice.git"
                         }
